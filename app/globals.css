@@ -38,3 +38,52 @@ body {
     linear-gradient(to bottom, rgba(148, 163, 184, 0.12) 1px, transparent 1px);
   background-size: 40px 40px;
 }
+
+/* TODO: TEAM CSS :  */
+.animated-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-bg::before,
+.animated-bg::after {
+  content: '';
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.4;
+  animation: float 14s ease-in-out infinite alternate;
+}
+
+.animated-bg::before {
+  top: -200px;
+  left: -200px;
+  background: radial-gradient(
+    circle,
+    rgba(56, 189, 248, 1),
+    rgba(15, 23, 42, 0.4)
+  );
+  animation-duration: 18s;
+}
+
+.animated-bg::after {
+  bottom: -250px;
+  right: -250px;
+  background: radial-gradient(
+    circle,
+    rgba(249, 115, 22, 1),
+    rgba(15, 23, 42, 0.3)
+  );
+  animation-duration: 22s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  100% {
+    transform: translateY(-40px) translateX(25px);
+  }
+}

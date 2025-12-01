@@ -7,8 +7,10 @@ import Container from './ui/Container';
 
 const links = [
   { label: 'Home', href: '#top' },
+  // { label: 'Marquee', href: '#marques' },
   { label: 'What We Do', href: '#what-we-do' },
   { label: 'Technology', href: '#technology' },
+
   { label: 'Impact', href: '#impact' },
   { label: 'Team', href: '#team' },
 ];
