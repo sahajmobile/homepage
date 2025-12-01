@@ -302,12 +302,12 @@ export default function Hero() {
             className="relative flex items-center justify-center"
           >
             {/* Floating shapes */}
-            <motion.div
+            {/* <motion.div
               className="absolute -top-16 -left-6 h-24 w-24 rounded-3xl border border-slate-700/70 
                 bg-slate-900/80"
               animate={{ y: [0, -10, 0], opacity: [0.7, 1, 0.7] }}
               transition={{ repeat: Infinity, duration: 7, ease: 'easeInOut' }}
-            />
+            /> */}
             <motion.div
               className="absolute -bottom-14 -right-6 h-24 w-24 rounded-full 
                 bg-[radial-gradient(circle_at_30%_0%,rgba(56,189,248,0.8),rgba(15,23,42,0.4))]"
