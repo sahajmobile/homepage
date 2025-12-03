@@ -163,7 +163,7 @@ export default function WhatWeDo() {
     <SectionWrapper id="what-we-do" className="animated-bg">
       <div className="relative z-20 text-center mb-16">
         <h2 className="text-4xl font-semibold bg-gradient-to-r from-sky-400 via-orange-400 to-pink-400 bg-clip-text text-transparent">
-          What We Do
+          How it works
         </h2>
         <p className="text-slate-300 max-w-2xl mx-auto mt-3 text-sm">
           SahajMobile invests first → builds the rails → and unlocks credit

@@ -12,10 +12,10 @@ export default function HomePage() {
     <main className="relative min-h-screen">
       <Navbar />
       <Hero />
-      <Marquee />
+      {/* <Marquee /> */}
       <WhatWeDo />
       <Technology />
-      <Impact />
+      {/* <Impact /> */}
       <Team />
       <Footer />
     </main>
