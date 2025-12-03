@@ -276,7 +276,7 @@ const mainLinks = [
     ],
   },
 
-  { label: 'Technology', href: '/technology' },
+  // { label: 'Technology', href: '/technology' },
 ];
 
 const moreLinks = [
