@@ -106,7 +106,7 @@ export default function Technology() {
           className="relative drop-shadow-[0_0_50px_rgba(56,189,248,0.35)] transition-all"
         >
           <Image
-            src="/tech.png"
+            src="/tech2.png"
             alt="SahajMobile System UI"
             width={1200}
             height={700}

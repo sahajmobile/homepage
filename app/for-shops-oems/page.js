@@ -333,7 +333,7 @@ export default function ForShopsOEMsPage() {
                 <div className="absolute inset-6 rounded-2xl bg-gradient-to-b from-slate-900 to-slate-950/90" />
                 {/* You can replace this div with <Image src="/map-bd.png"...> when ready */}
                 <Image
-                  src="/map-bd1.png"
+                  src="/map-bd2.png"
                   alt="Bangladesh map"
                   fill
                   className="object-cover"
