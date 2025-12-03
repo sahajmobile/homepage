@@ -18,13 +18,13 @@
 // }
 import './globals.css';
 import SmoothScroll from '../components/SmoothScroll';
-// import GlobalBackground from '../components/GlobalBackground';
+import GlobalBackground from '../components/GlobalBackground';
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="relative min-h-screen overflow-x-hidden bg-[#040b19] text-white">
-        {/* <GlobalBackground /> */}
+        <GlobalBackground />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

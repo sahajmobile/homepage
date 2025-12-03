@@ -14,6 +14,63 @@ const fade = {
 };
 
 export default function ForShopsOEMsPage() {
+  const phones = [
+    {
+      name: 'Samsung Galaxy A04',
+      emi: 'Tk 1,299 / month',
+      specs: '4GB • 64GB • 12 months',
+      img: '/phones/a04.webp',
+    },
+    {
+      name: 'vivo Y02',
+      emi: 'Tk 1,199 / month',
+      specs: '3GB • 32GB',
+      img: '/phones/y02.png',
+    },
+    {
+      name: 'Samsung Galaxy A14',
+      emi: 'Tk 1,699 / month',
+      specs: '4GB • 128GB',
+      img: '/phones/a14.jpg',
+    },
+    {
+      name: 'Redmi 12',
+      emi: 'Tk 1,499 / month',
+      specs: '4GB • 128GB',
+      img: '/phones/12.webp',
+    },
+    {
+      name: 'Oppo A17',
+      emi: 'Tk 1,399 / month',
+      specs: '4GB • 64GB',
+      img: '/phones/a17.jpg',
+    },
+    {
+      name: 'Infinix Hot 12',
+      emi: 'Tk 1,249 / month',
+      specs: '4GB • 64GB',
+      img: '/phones/i12.webp',
+    },
+    {
+      name: 'Realme C30',
+      emi: 'Tk 1,099 / month',
+      specs: '3GB • 32GB',
+      img: '/phones/c30.jpg',
+    },
+    {
+      name: 'vivo Y17',
+      emi: 'Tk 1,599 / month',
+      specs: '6GB • 128GB',
+      img: '/phones/y17.png',
+    },
+    {
+      name: 'Samsung S22 Ultra',
+      emi: 'Tk 6,999 / month',
+      specs: '12GB • 256GB',
+      img: '/phones/s22.webp',
+    },
+  ];
+
   const [price, setPrice] = useState(20000);
   const [down, setDown] = useState(40); // percent
   const [tenor, setTenor] = useState(6); // months
@@ -87,8 +144,8 @@ export default function ForShopsOEMsPage() {
                 className="opacity-80"
               />
               <Image
-                src="/xiaomi.png"
-                alt="Xiaomi"
+                src="/vivo.png"
+                alt="Vivo"
                 width={70}
                 height={26}
                 className="opacity-80"
@@ -101,8 +158,15 @@ export default function ForShopsOEMsPage() {
                 className="opacity-80"
               />
               <Image
-                src="/realme.png"
+                src="/realme.jpg"
                 alt="Realme"
+                width={78}
+                height={26}
+                className="opacity-80"
+              />
+              <Image
+                src="/honor.png"
+                alt="honor"
                 width={78}
                 height={26}
                 className="opacity-80"
@@ -363,7 +427,7 @@ export default function ForShopsOEMsPage() {
       </SectionWrapper>
 
       {/* ================= PARALLAX PHONE GRID (D) ================= */}
-      <SectionWrapper className="pt-12">
+      {/* <SectionWrapper className="pt-12">
         <Container>
           <motion.h2
             variants={fade}
@@ -402,6 +466,63 @@ export default function ForShopsOEMsPage() {
           <p className="mt-3 text-[11px] text-slate-400">
             Each box represents a device SKU that can be sold on SahajMobile EMI
             at your shop.
+          </p>
+        </Container>
+      </SectionWrapper> */}
+      {/* ================= PARALLAX PHONE GRID (D) ================= */}
+      <SectionWrapper className="pt-12">
+        <Container>
+          <motion.h2
+            variants={fade}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="text-xl md:text-2xl font-semibold text-white mb-5"
+          >
+            Designed for modern smartphone shelves.
+          </motion.h2>
+
+          <div className="grid gap-4 md:grid-cols-3">
+            {phones.map((phone, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: idx % 3 === 0 ? 20 : -10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: idx * 0.05 }}
+                className="
+            h-32 rounded-3xl bg-slate-900/40 backdrop-blur-lg
+            border border-slate-700/50 shadow-[0_0_20px_rgba(0,0,0,0.4)]
+            p-4 flex items-center gap-4 hover:border-cyan-400/50
+            hover:shadow-[0_0_30px_rgba(34,211,238,0.35)]
+            transition-all duration-300
+          "
+              >
+                {/* IMAGE */}
+                <div className="h-20 w-20 rounded-2xl bg-slate-800/40 flex items-center justify-center overflow-hidden">
+                  <Image
+                    src={phone.img}
+                    width={80}
+                    height={80}
+                    alt={phone.name}
+                    className="object-contain"
+                  />
+                </div>
+
+                {/* DETAILS */}
+                <div className="text-slate-300 text-sm leading-tight">
+                  <p className="font-medium text-white">{phone.name}</p>
+                  <p className="text-cyan-300 text-xs">{phone.emi}</p>
+                  <p className="text-slate-500 text-[11px]">{phone.specs}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <p className="mt-3 text-[11px] text-slate-400">
+            {/* Each box represents a device SKU that can be sold on SahajMobile EMI
+            at your shop. */}
+            charges applicable
           </p>
         </Container>
       </SectionWrapper>

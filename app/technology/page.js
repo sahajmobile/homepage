@@ -1,125 +1,92 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import SectionWrapper from '@/components/sections/SectionWrapper';
 import Navbar from '@/components/Navbar';
 
-export const dynamic = 'force-dynamic';
+const tech = [
+  {
+    title: 'Sahaj Manager App',
+    body: 'Retail partners onboard customers, verify identity, and issue EMI directly inside the SahajMobile Manager App.',
+  },
+  {
+    title: 'Sahaj Locker',
+    body: 'Device-level security allows locking/unlocking smartphones based on repayment performance — reducing default rates dramatically.',
+  },
+  {
+    title: 'Underwriting Engine',
+    body: 'Behavioral + alternative data models generate risk scores and repayment predictions for banks integrating with us.',
+  },
+];
 
-export default function TechnologyPage() {
+export default function Technology() {
   return (
-    <main className="pt-32 pb-24 max-w-5xl mx-auto px-6">
+    <>
       <Navbar />
-      {/* Hero */}
-      <section className="mb-14 text-center">
-        <p className="text-xs uppercase tracking-[0.3em] text-slate-400 mb-3">
-          Technology
-        </p>
-        <h1 className="text-4xl md:text-5xl font-semibold bg-gradient-to-r from-cyan-400 via-orange-400 to-pink-400 bg-clip-text text-transparent">
-          The rails behind simple smartphone EMI.
-        </h1>
-        <p className="mt-4 text-slate-300 text-sm md:text-base max-w-2xl mx-auto">
-          SahajMobile turns local phone shops into mini credit desks, powered by
-          a full-stack underwriting engine built for Bangladesh&apos;s real
-          economy.
-        </p>
-      </section>
+      <SectionWrapper className="section-padding animated-bg">
+        {/* Header */}
+        <div className="text-center mb-16 relative z-10">
+          <h2 className="text-4xl font-semibold bg-gradient-to-r from-cyan-400 via-orange-400 to-pink-400 bg-clip-text text-transparent">
+            Technology
+          </h2>
+          <p className="text-slate-400 max-w-xl mx-auto text-sm mt-3">
+            Lightweight infrastructure powering EMI, device intelligence, and
+            underwriting across low-income markets.
+          </p>
+        </div>
 
-      {/* Manager App */}
-      <section className="mb-12 space-y-4">
-        <h2 className="text-xl font-semibold text-white">
-          SahajMobile Manager App
-        </h2>
-        <p className="text-slate-300 text-sm md:text-base leading-relaxed">
-          The SahajMobile Manager App runs on standard Android smartphones. Shop
-          managers can submit applications, upload documents, and track EMIs in
-          real time – all in a few taps. Guided, local-language workflows make
-          it easy for staff to onboard customers correctly every time.
-        </p>
-        <div className="grid md:grid-cols-3 gap-4 mt-4">
-          {[
-            'Instant EMI applications at the counter',
-            'Status tracking for approvals and overdues',
-            'Local language and built-in validation',
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="rounded-2xl border border-slate-800 bg-slate-900/60 px-4 py-3 text-xs text-slate-300"
+        {/* FEATURE MOCKUP IMAGE */}
+        <div className="relative w-full flex justify-center mb-20">
+          {/* Glow aura */}
+          <div
+            className="absolute w-[500px] h-[500px] rounded-full
+          bg-[radial-gradient(circle,rgba(56,189,248,0.25),transparent)]
+          blur-3xl opacity-60 -z-10"
+          />
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, y: 30 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.03, y: -5 }}
+            className="relative drop-shadow-[0_0_50px_rgba(56,189,248,0.35)] transition-all"
+          >
+            <Image
+              src="/tech2.png"
+              alt="SahajMobile System UI"
+              width={1200}
+              height={700}
+              className="rounded-2xl shadow-xl"
+              priority
+            />
+          </motion.div>
+        </div>
+
+        {/* TECHNOLOGY CARDS */}
+        <div className="grid md:grid-cols-3 gap-8 relative z-10">
+          {tech.map((t, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, delay: idx * 0.15 }}
+              viewport={{ once: true }}
+              whileHover={{
+                y: -8,
+                boxShadow: '0 0 35px rgba(129,140,248,0.35)',
+              }}
+              className="rounded-2xl bg-slate-900/60 border border-slate-800
+            p-6 backdrop-blur-xl
+            transition-all duration-300"
             >
-              {item}
-            </div>
+              <h3 className="text-lg font-semibold text-white">{t.title}</h3>
+              <p className="text-slate-400 text-sm mt-3">{t.body}</p>
+            </motion.div>
           ))}
         </div>
-      </section>
-
-      {/* Risk Engine */}
-      <section className="mb-12 space-y-4">
-        <h2 className="text-xl font-semibold text-white">
-          Risk & Underwriting Engine
-        </h2>
-        <p className="text-slate-300 text-sm md:text-base leading-relaxed">
-          Traditional banks rely on payslips, credit cards, and formal
-          documents. SahajMobile starts from behavior: each funded handset
-          creates a digital repayment trail. Over time, our engine learns from
-          thousands of EMIs to score customers whose incomes are informal,
-          seasonal, or gig-based.
-        </p>
-        <div className="grid md:grid-cols-2 gap-4 mt-4">
-          <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 text-sm text-slate-300">
-            <p className="font-semibold text-slate-100 mb-1">
-              Alternative data, not just paperwork
-            </p>
-            <p className="text-xs text-slate-400">
-              Repayment history, device behavior, shop performance and other
-              real-world signals feed into our risk models.
-            </p>
-          </div>
-          <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 text-sm text-slate-300">
-            <p className="font-semibold text-slate-100 mb-1">
-              Designed for small-ticket credit
-            </p>
-            <p className="text-xs text-slate-400">
-              Built to support handset EMIs today and future embedded credit
-              products across retail and services.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Device Lock */}
-      <section className="mb-12 space-y-4">
-        <h2 className="text-xl font-semibold text-white">
-          Device Security & Locking Layer
-        </h2>
-        <p className="text-slate-300 text-sm md:text-base leading-relaxed">
-          To keep EMIs affordable and portfolios healthy, we partner with OEMs
-          to enable a secure device-lock feature. If payments are up to date,
-          the phone behaves like any normal device. If a customer falls behind,
-          some functions may be temporarily blocked until the account is
-          regularized.
-        </p>
-        <ul className="mt-3 space-y-2 text-xs md:text-sm text-slate-400 list-disc list-inside">
-          <li>Real-time lock/unlock updates based on payment status</li>
-          <li>Cannot be disabled by factory reset or app uninstalls</li>
-          <li>Helps keep pricing fair and sustainable for customers</li>
-        </ul>
-      </section>
-
-      {/* Compliance */}
-      <section className="mb-6 space-y-4">
-        <h2 className="text-xl font-semibold text-white">
-          Compliance & Data Protection
-        </h2>
-        <p className="text-slate-300 text-sm md:text-base leading-relaxed">
-          SahajMobile is built with data protection in mind. We use
-          industry-standard security practices, restrict access to customer
-          data, and are developing our formal legal and privacy documentation as
-          we scale. Our goal is simple: protect users while unlocking access to
-          the digital economy.
-        </p>
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/60 px-4 py-3 text-xs text-slate-400">
-          Full Terms of Service and Privacy Policy will be published as
-          SahajMobile continues to expand. In the meantime, we operate with
-          clear, simple EMI terms and transparent communication with customers
-          and partners.
-        </div>
-      </section>
-    </main>
+      </SectionWrapper>
+    </>
   );
 }
