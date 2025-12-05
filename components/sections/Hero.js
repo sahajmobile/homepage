@@ -186,6 +186,7 @@ import { Line2 } from 'three/examples/jsm/lines/Line2.js';
 import { LineMaterial } from 'three/examples/jsm/lines/LineMaterial.js';
 import { LineGeometry } from 'three/examples/jsm/lines/LineGeometry.js';
 import Link from 'next/link';
+import Button from '../ui/Button';
 
 export default function Hero() {
   const canvasRef = useRef(null);
@@ -420,15 +421,15 @@ export default function Hero() {
           workers across Bangladesh.
         </p>
 
-        <Link
-          href="https://api.whatsapp.com/send?phone=%2B8801901634762&fbclid=IwY2xjawOfgpxleHRuA2FlbQIxMABicmlkETF4WHZMcmRpWnA0VmJMZTlsc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHoU4JYvdbzmQ_FxpFejIbbohTJ4F_txWSpVFjAAlbPg21JDlOFaLhprxGs4-_aem_eBgahTKrRVqF_akYBRpVOQ"
+        {/* <Link
+          href="https://api.whatsapp.com/send?phone=%2B8801901634762"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="mt-10 bg-gradient-to-r from-yellow-500 to-orange-400 text-black font-bold py-3 px-8 rounded-full shadow-lg hover:scale-105 transition">
+          <Button className="mt-10 bg-gradient-to-r from-yellow-500 to-orange-400 text-black font-bold py-3 px-8 rounded-full shadow-lg hover:scale-105 transition">
             Become Partner
-          </button>
-        </Link>
+          </Button>
+        </Link> */}
       </div>
     </section>
   );
