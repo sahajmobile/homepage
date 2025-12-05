@@ -122,6 +122,7 @@
 //     </footer>
 //   );
 // }
+
 'use client';
 
 import { motion } from 'framer-motion';
@@ -165,7 +166,8 @@ export default function Footer() {
         rounded-3xl bg-slate-900/30 backdrop-blur-xl 
         border border-slate-800/40"
       >
-        <div className="grid md:grid-cols-4 gap-12">
+        {/* <div className="grid md:grid-cols-4 gap-12"> */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
           <div>
             <h3 className="text-xl font-semibold text-white">SahajMobile</h3>
             <p className="text-sm text-slate-400 mt-3">
