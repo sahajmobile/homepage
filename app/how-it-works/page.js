@@ -38,7 +38,7 @@ export default function HowItWorksPage() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center text-4xl font-bold
+            className="text-center text-4xl font-bold pb-10
               bg-linear-to-r from-cyan-400 via-orange-400 to-pink-400
               bg-clip-text text-transparent"
           >
