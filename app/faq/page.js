@@ -1,3 +1,4 @@
+import ThreeBackground from '@/components/background/ThreeBackground';
 import Navbar from '@/components/Navbar';
 
 export const dynamic = 'force-dynamic';
@@ -54,66 +55,71 @@ const partnerFaq = [
 
 export default function FAQPage() {
   return (
-    <main className="pt-32 pb-24 max-w-5xl mx-auto px-6">
+    <>
       <Navbar />
-      {/* Hero */}
-      <section className="mb-10 text-center">
-        {/* <p className="text-xs uppercase tracking-[0.3em] text-slate-400 mb-3">
+      <ThreeBackground>
+        <main className="pt-32 pb-24 max-w-5xl mx-auto px-6">
+          {/* Hero */}
+          <section className="mb-10 text-center">
+            {/* <p className="text-xs uppercase tracking-[0.3em] text-slate-400 mb-3">
           FAQ
         </p> */}
-        <h1 className="text-4xl md:text-5xl font-semibold bg-gradient-to-r from-cyan-400 via-orange-400 to-pink-400 bg-clip-text text-transparent">
-          Frequently Asked Questions
-        </h1>
-        <p className="mt-4 text-slate-300 text-sm md:text-base max-w-2xl mx-auto">
-          Answers for customers and partners about how SahajMobile EMI works.
-        </p>
-      </section>
+            <h1 className="text-4xl md:text-5xl font-semibold bg-gradient-to-r from-cyan-400 via-orange-400 to-pink-400 bg-clip-text text-transparent">
+              Frequently Asked Questions
+            </h1>
+            <p className="mt-4 text-slate-300 text-sm md:text-base max-w-2xl mx-auto">
+              Answers for customers and partners about how SahajMobile EMI
+              works.
+            </p>
+          </section>
 
-      <section className="grid md:grid-cols-2 gap-8">
-        {/* Customer FAQs */}
-        <div>
-          <h2 className="text-lg font-semibold text-white mb-3">
-            For Customers
-          </h2>
-          <div className="space-y-3">
-            {customerFaq.map((item, i) => (
-              <div
-                key={i}
-                className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4"
-              >
-                <p className="text-sm font-semibold text-slate-100 mb-1">
-                  {item.q}
-                </p>
-                <p className="text-xs text-slate-300 leading-relaxed">
-                  {item.a}
-                </p>
+          <section className="grid md:grid-cols-2 gap-8">
+            {/* Customer FAQs */}
+            <div>
+              <h2 className="text-lg font-semibold text-white mb-3">
+                For Customers
+              </h2>
+              <div className="space-y-3">
+                {customerFaq.map((item, i) => (
+                  <div
+                    key={i}
+                    className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4"
+                  >
+                    <p className="text-sm font-semibold text-slate-100 mb-1">
+                      {item.q}
+                    </p>
+                    <p className="text-xs text-slate-300 leading-relaxed">
+                      {item.a}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
 
-        {/* Partner FAQs */}
-        <div>
-          <h2 className="text-lg font-semibold text-white mb-3">
-            For Retailers &amp; OEMs
-          </h2>
-          <div className="space-y-3">
-            {partnerFaq.map((item, i) => (
-              <div
-                key={i}
-                className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4"
-              >
-                <p className="text-sm font-semibold text-slate-100 mb-1">
-                  {item.q}
-                </p>
-                <p className="text-xs text-slate-300 leading-relaxed">
-                  {item.a}
-                </p>
+            {/* Partner FAQs */}
+            <div>
+              <h2 className="text-lg font-semibold text-white mb-3">
+                For Retailers &amp; OEMs
+              </h2>
+              <div className="space-y-3">
+                {partnerFaq.map((item, i) => (
+                  <div
+                    key={i}
+                    className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4"
+                  >
+                    <p className="text-sm font-semibold text-slate-100 mb-1">
+                      {item.q}
+                    </p>
+                    <p className="text-xs text-slate-300 leading-relaxed">
+                      {item.a}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </main>
+            </div>
+          </section>
+        </main>
+      </ThreeBackground>
+    </>
   );
 }

@@ -16,15 +16,18 @@
 //     </html>
 //   );
 // }
+
 import './globals.css';
 import SmoothScroll from '../components/SmoothScroll';
-import GlobalBackground from '../components/GlobalBackground';
+import { Playfair_Display, Inter } from 'next/font/google';
+
+const playfair = Playfair_Display({ subsets: ['latin'], weight: ['900'] });
+const inter = Inter({ subsets: ['latin'], weight: ['400'] });
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="relative min-h-screen overflow-x-hidden bg-[#040b19] text-white">
-        <GlobalBackground />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

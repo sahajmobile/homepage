@@ -1,18 +1,15 @@
 @import 'tailwindcss';
 
-/* Base theme */
 :root {
   color-scheme: dark;
 }
 
-/* Global body styles */
-body {
+/* body {
   margin: 0;
   min-height: 100vh;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text',
     'Inter', sans-serif;
 
-  /* Deep neo-fintech gradient background */
   background: radial-gradient(
     circle at top,
     #0f172a 0,
@@ -20,15 +17,16 @@ body {
     #000000 100%
   );
   color: #f9fafb;
+} */
+body {
+  background: transparent !important;
 }
 
-/* Optional section spacing helper */
 .section-padding {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
 
-/* Subtle grid overlay you can apply with className="bg-grid" */
 .bg-grid {
   background-image: linear-gradient(
       to right,
@@ -86,4 +84,13 @@ body {
   100% {
     transform: translateY(-40px) translateX(25px);
   }
+}
+/* .text-shadow-gold {
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.6), 0 0 25px rgba(255, 165, 0, 0.4);
+} */
+.glow-text {
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 25px rgba(255, 215, 0, 0.9),
+    0 0 45px rgba(255, 200, 0, 0.8), 0 0 70px rgba(255, 180, 0, 0.7),
+    0 0 90px rgba(255, 160, 0, 0.6), 0 0 120px rgba(255, 140, 0, 0.5);
 }
