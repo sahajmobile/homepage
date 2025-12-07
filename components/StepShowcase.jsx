@@ -159,11 +159,12 @@ export default function StepShowcase({
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setIndex((prev) => {
-        const next = (prev + 1) % items.length;
-        onStepChange && onStepChange(next);
-        return next;
-      });
+      //   setIndex((prev) => {
+      //     const next = (prev + 1) % items.length;
+      //     onStepChange && onStepChange(next);
+      //     return next;
+      //   });
+      setIndex((prev) => (prev + 1) % items.length);
     }, interval);
 
     return () => clearInterval(timer);
