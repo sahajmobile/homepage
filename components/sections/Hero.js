@@ -117,13 +117,10 @@ export default function Hero() {
   const phoneRef = useRef(null);
   const { scrollY } = useScroll();
 
-  // ----- Scroll reactive particles -----
   const particleY = useTransform(scrollY, [0, 400], [0, -150]);
 
-  // ----- 360° phone rotation -----
   const rotatePhone = useTransform(scrollY, [0, 300], [0, 360]);
 
-  // ----- EMI text pulse animation -----
   const emiPulse = {
     animate: {
       opacity: [0.7, 1, 0.7],
@@ -132,7 +129,6 @@ export default function Hero() {
     },
   };
 
-  // ----- Mouse parallax -----
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -147,7 +143,6 @@ export default function Hero() {
         y.set((e.clientY - window.innerHeight / 2) / 80);
       }}
     >
-      {/* BACKGROUND VIDEO */}
       <video
         src="/videos/hero1.mp4"
         autoPlay
@@ -157,10 +152,8 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full object-cover opacity-[0.60]"
       />
 
-      {/* DARK GRADIENT MASK */}
       <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(0,0,0,0.15),rgba(0,0,0,0.9))]"></div>
 
-      {/* GLASS ORBIT RINGS */}
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ duration: 18, repeat: Infinity, ease: 'linear' }}
@@ -182,7 +175,6 @@ export default function Hero() {
         "
       />
 
-      {/* SWIRLING PARTICLES */}
       {[...Array(40)].map((_, i) => (
         <motion.div
           key={i}
@@ -196,6 +188,7 @@ export default function Hero() {
             y: [0, -150, 0],
           }}
           transition={{
+            // eslint-disable-next-line react-hooks/purity
             duration: 6 + Math.random() * 4,
             repeat: Infinity,
             delay: i * 0.15,
@@ -204,7 +197,6 @@ export default function Hero() {
         />
       ))}
 
-      {/* HERO TEXT */}
       <div className="relative z-20 text-center max-w-3xl px-6">
         <motion.h1
           initial={{ opacity: 0, y: 25 }}
@@ -233,7 +225,6 @@ export default function Hero() {
           Secure EMI for real Bangladesh. No credit card, instant approval.
         </motion.p>
 
-        {/* CTA BUTTONS */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
