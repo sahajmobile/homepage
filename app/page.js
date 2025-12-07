@@ -1,13 +1,13 @@
 import Navbar from '../components/Navbar';
 import Hero from '../components/sections/Hero';
-import Marquee from '../components/sections/Marquee';
-import WhatWeDo from '../components/sections/WhatWeDo';
+// import Marquee from '../components/sections/Marquee';
+// import WhatWeDo from '../components/sections/WhatWeDo';
 import Technology from '../components/sections/Technology';
-import Impact from '../components/sections/Impact';
+// import Impact from '../components/sections/Impact';
 import HowItWorksPage from './how-it-works/page';
-import Team from '../components/sections/Team';
+// import Team from '../components/sections/Team';
 import Footer from '../components/sections/Footer';
-import ShowcaseVideo from '@/components/sections/ShowcaseVideo';
+// import ShowcaseVideo from '@/components/sections/ShowcaseVideo';
 
 export default function HomePage() {
   return (

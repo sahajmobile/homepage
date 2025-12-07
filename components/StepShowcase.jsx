@@ -151,20 +151,19 @@ import { motion } from 'framer-motion';
 
 export default function StepShowcase({
   items,
-  interval,
-  onStepChange,
+  interval = 2000,
+  onStepChange = () => {},
   className = '',
 }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      //   setIndex((prev) => {
-      //     const next = (prev + 1) % items.length;
-      //     onStepChange && onStepChange(next);
-      //     return next;
-      //   });
-      setIndex((prev) => (prev + 1) % items.length);
+      setIndex((prev) => {
+        const next = (prev + 1) % items.length;
+        onStepChange(next); // 🔥 CRITICAL LINE
+        return next;
+      });
     }, interval);
 
     return () => clearInterval(timer);
@@ -172,7 +171,7 @@ export default function StepShowcase({
 
   return (
     <div className={`flex flex-col items-center space-y-4 ${className}`}>
-      {/* PHONE FRAME */}
+      {/* PHONE SCREEN */}
       <motion.div
         key={index}
         initial={{ opacity: 0, y: 20 }}
