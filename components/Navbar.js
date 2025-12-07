@@ -897,9 +897,15 @@ export default function Navbar() {
               ))}
 
               <div className="pt-4">
-                <Button className="w-full text-[13px]">
-                  Get a Phone on EMI
-                </Button>
+                <Link
+                  href="https://api.whatsapp.com/send?phone=%2B8801901634762"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="w-full text-[13px]">
+                    Get a Phone on EMI
+                  </Button>
+                </Link>
               </div>
             </div>
           </motion.div>
