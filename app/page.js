@@ -7,7 +7,7 @@ import Technology from '../components/sections/Technology';
 import HowItWorksPage from './how-it-works/page';
 // import Team from '../components/sections/Team';
 import Footer from '../components/sections/Footer';
-// import ShowcaseVideo from '@/components/sections/ShowcaseVideo';
+import ShowcaseVideo from '@/components/sections/ShowcaseVideo';
 
 export default function HomePage() {
   return (
@@ -27,7 +27,7 @@ export default function HomePage() {
       <Navbar />
       {/* <HeroGrid /> */}
       <Hero />
-      {/* <ShowcaseVideo /> */}
+      <ShowcaseVideo />
       <HowItWorksPage />
       <Technology />
       {/* <Team /> */}
