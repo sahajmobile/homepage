@@ -153,16 +153,11 @@ export default function ForShopsOEMsPage() {
               </p>
 
               <div className="flex flex-wrap items-center gap-6 opacity-80">
-                <Image
-                  src="/samsung1.png"
-                  alt="Samsung"
-                  width={80}
-                  height={26}
-                />
-                <Image src="/vivo.png" alt="Vivo" width={70} height={26} />
+                <Image src="/sam2.png" alt="Samsung" width={80} height={26} />
+                <Image src="/vivo1.png" alt="Vivo" width={70} height={26} />
                 <Image src="/oppo.png" alt="Oppo" width={70} height={26} />
                 <Image src="/realme.jpg" alt="Realme" width={78} height={26} />
-                <Image src="/honor.png" alt="Honor" width={78} height={26} />
+                <Image src="/honor1.png" alt="Honor" width={78} height={26} />
               </div>
             </motion.div>
           </Container>
